@@ -27,6 +27,7 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
+      <li class="list-group">Item 5</li>
     </ul>
    </div>
   </div>
@@ -47,7 +48,7 @@
     console.log(document.links);
 
     //GETELEMENTBYID//
-    console.log(document.getElementById('header-title'));
+   /* console.log(document.getElementById('header-title'));
     var headerTitle = document.getElementById('header-title');
     var header = document.getElementById('main-header');
     headerTitle.textContent = "Hello";
@@ -74,7 +75,23 @@
     for(var i=0; i< items.length;i++)
     {
       items[2].style.backgroundColor = 'green';
-    }
+    }  */
+
+    //GETELEMENTBYTAGNAME//
+    var li = document.getElementsByTagName('li');
+    console.log(li);
+    console.log(items[4]);
+    li[4].textContent = "Hello 2";
+    li[4].style.fontWeight = "bold";
+    li[4].style.backgroundColor = "green";
+   /* for(var i=0; i<li.length; i++)
+    {
+      li[i].style.backgroundColor = "#f4f4f4";
+    }*/
+
+    //change by className//
+    
+
 
 
 
@@ -82,4 +99,4 @@
   </script>
 
 </body>
-</html>
+</html> 
