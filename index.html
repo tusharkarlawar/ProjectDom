@@ -49,10 +49,35 @@
     //GETELEMENTBYID//
     console.log(document.getElementById('header-title'));
     var headerTitle = document.getElementById('header-title');
-    var header = document.getElementById('main-title');
+    var header = document.getElementById('main-header');
     headerTitle.textContent = "Hello";
-    headerTitle.style.borderBottom = 'solid 3px #000';
-    header.style.borderBottom = 'solid 3px #000';
+    //headerTitle.textContent = "goodbye";
+    //headerTitle.innerHTML ='<h3>Hello<h3>';
+    //headerTitle.style.innerHTML ='<h3>Hello<h3>';
+      header.style.borderBottom = 'solid 3px #000';  
+
+
+
+     //GETELEMENTBYCLASSNAME//
+    
+    //header.style.borderBottom = 'solid 3px #000';
+
+    var items = document.getElementsByClassName('list-group-item');
+    console.log(items);
+    console.log(items[1]);
+
+    for(var i=0; i< items.length;i++)
+    {
+      items[i].style.fontWeight = 'bold';
+    }
+
+    for(var i=0; i< items.length;i++)
+    {
+      items[i].style.color = 'green';
+    }
+
+
+
   </script>
   </script>
 
