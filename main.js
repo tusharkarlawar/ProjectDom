@@ -1,73 +1,30 @@
-console.log(document);
-    var itemList = document.querySelector('#items');
-    //parentNode
-    console.log(itemList.parentNode);
-    itemList.parentNode.style.backgroundColor = 'red';
-    console.log(itemList.parentNode.parentNode.parentNode);
+function q(event){   
+    event.preventDefault() 
+let ob = { 
 
-    //parentElement
-    console.log(itemList.parentNode);
-    itemList.parentNode.style.backgroundColor = 'red';
-    console.log(itemList.parentNode.parentNode.parentNode); 
+      fname: document.getElementById("fname").value, 
+      email: document.getElementById("email").value, 
+      phone: document.getElementById("phone").value, 
 
-    //childNodes//
-    console.log(itemList.childNodes);
-    console.log(itemList.children);
-    console.log(itemList.children[1]);
-    itemList.children[1].style.backgroundColor = 'yellow';
+} 
+     //localstorage
+    localStorage.setItem(ob.email, JSON.stringify(ob)) 
 
-    //firstChild
-    console.log(itemList.firstChild);
+    addd(ob) 
+}     
 
-    //firstElementChild
-    console.log(itemList.firstElementChild);
-    itemList.firstElementChild.textContent = 'HELLO';
 
-    //lastChild
-    console.log(itemList.lastChild);
 
-    //lastElementChild
-    console.log(itemList.lastElementChild);
-    itemList.lastElementChild.textContent = 'HELLO 1';
+function addd(ob) { 
+        let ul = document.getElementById('ulul'); 
+        let li = document.createElement('li'); 
+        let nText = ob.fname 
+        let nEmail = ob.email 
+        let nPhone = ob.phone 
+        let nNode = document.createTextNode(`${nText} - ${nEmail} - ${nPhone}`) 
+        li.appendChild(nNode) 
+        ul.appendChild(li) 
 
-    //nextSibling
-    console.log(itemList.nextSibling);
 
-    //nextElementSibling
-    console.log(itemList.nextElementSibling);
-
-    //previousSibling
-    console.log(itemList.previousSibling);
-
-    //previousElementSibling
-    console.log(itemList.previousElementSibling);
-    itemList.previousElementSibling.style.color = "green";
-
-    //createElement
-
-    //create Div
-    var newDiv = document.createElement('div');
-
-    //add class
-    newDiv.className = 'hello';
-
-    //add id
-    newDiv.id = 'hello1';
-
-    //add Attribute
-    newDiv.setAttribute('title','Hello Div');
-
-    //create a text node
-    var newDivText = document.createTextNode('Hello World');
-
-    //add text to div
-
-    newDiv.appendChild(newDivText);
-
-    var container = document.querySelector('header.container');
-    var h1 = document.querySelector('header h1');
-
-    console.log(newDiv);
-    newDiv.style.fontsize = '30px';
-    container.insertBefore(newDiv, h1);
+    } 
 
